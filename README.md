@@ -25,11 +25,10 @@ Since this is a client-side application, no server installation is required!
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/polyglot-ai.git](https://github.com/your-username/polyglot-ai.git)
     ```
 2.  **Navigate to the project folder:**
     ```bash
-    cd polyglot-ai
+    cd LinguaVox
     ```
 3.  **Run the app:**
     * Simply open `index.html` in your web browser.
