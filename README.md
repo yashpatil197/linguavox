@@ -1,8 +1,8 @@
 
 
-# 🌐 PolyGlot AI
+# 🌐 LinguaVox
 
-**PolyGlot AI** is a lightweight, mobile-responsive web application that bridges language barriers with real-time translation and voice synthesis. Built with vanilla web technologies, it offers a seamless experience for translating text and speech across multiple languages.
+**LinguaVox** is a lightweight, mobile-responsive web application that bridges language barriers with real-time translation and voice synthesis. Built with vanilla web technologies, it offers a seamless experience for translating text and speech across multiple languages.
 
 ## ✨ Features
 
