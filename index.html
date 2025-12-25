@@ -1,398 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#222f3e">
-    
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="LinguaVox">
-    
-    <title>LinguaVox| Mobile Ready</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#222f3e">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LinguaVox">
+    
+    <title>LinguaVox| Mobile Ready</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
 
-        :root {
-            /* Dark Mode (Default) */
-            --primary: #00d2d3;
-            --primary-dark: #01a3a4;
-            --bg: #222f3e;
-            --card: #2e3d4f;
-            --text: #c8d6e5;
-            --input-bg: #1e2836;
-            --border: #1e2836;
-        }
+        :root {
+            /* Dark Mode (Default) */
+            --primary: #00d2d3;
+            --primary-dark: #01a3a4;
+            --bg: #222f3e;
+            --card: #2e3d4f;
+            --text: #c8d6e5;
+            --input-bg: #1e2836;
+            --border: #1e2836;
+        }
 
-        body.light-mode {
-            --primary: #0984e3;
-            --primary-dark: #74b9ff;
-            --bg: #f1f2f6;
-            --card: #ffffff;
-            --text: #2f3542;
-            --input-bg: #dfe4ea;
-            --border: #ced6e0;
-        }
+        body.light-mode {
+            --primary: #0984e3;
+            --primary-dark: #74b9ff;
+            --bg: #f1f2f6;
+            --card: #ffffff;
+            --text: #2f3542;
+            --input-bg: #dfe4ea;
+            --border: #ced6e0;
+        }
 
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Outfit', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            /* Prevent rubber-banding on iOS */
-            overscroll-behavior-y: none; 
-            transition: background-color 0.3s;
-        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            /* Prevent rubber-banding on iOS */
+            overscroll-behavior-y: none; 
+            transition: background-color 0.3s;
+        }
 
-        .container {
-            background-color: var(--card);
-            width: 90%;
-            max-width: 500px;
-            padding: 30px;
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            text-align: center;
-            position: relative;
-            /* Mobile Layout Fixes */
-            display: flex;
-            flex-direction: column;
-            margin: 20px auto; 
-        }
+        .container {
+            background-color: var(--card);
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+            text-align: center;
+            position: relative;
+            /* Mobile Layout Fixes */
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto; 
+        }
 
-        /* --- MOBILE RESPONSIVENESS --- */
-        @media (max-width: 480px) {
-            .container {
-                width: 95%;
-                padding: 20px;
-                margin: 10px;
-                border-radius: 16px;
-            }
-            h1 { font-size: 1.8rem; }
-            button { padding: 14px; }
-            .history-item { font-size: 0.8rem; }
-        }
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+                margin: 10px;
+                border-radius: 16px;
+            }
+            h1 { font-size: 1.8rem; }
+            button { padding: 14px; }
+            .history-item { font-size: 0.8rem; }
+        }
 
-        h1 { margin: 10px 0 5px; }
-        .tagline {
-            color: var(--primary);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
+        h1 { margin: 10px 0 5px; }
+        .tagline {
+            color: var(--primary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
 
-        .input-group { text-align: left; margin-bottom: 15px; }
-        
-        label {
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text);
-            opacity: 0.9;
-        }
+        .input-group { text-align: left; margin-bottom: 15px; }
+        
+        label {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text);
+            opacity: 0.9;
+        }
 
-        .text-area-wrapper { position: relative; }
-        
-        textarea {
-            width: 100%;
-            height: 100px;
-            background-color: var(--input-bg);
-            border: 2px solid var(--border);
-            border-radius: 16px;
-            color: var(--text);
-            padding: 15px;
-            padding-right: 45px;
-            font-family: 'Outfit', sans-serif;
-            font-size: 16px; /* Prevents zooming on iOS */
-            resize: none;
-            box-sizing: border-box;
-        }
-        
-        textarea:focus { outline: none; border-color: var(--primary); }
+        .text-area-wrapper { position: relative; }
+        
+        textarea {
+            width: 100%;
+            height: 100px;
+            background-color: var(--input-bg);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            color: var(--text);
+            padding: 15px;
+            padding-right: 45px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px; /* Prevents zooming on iOS */
+            resize: none;
+            box-sizing: border-box;
+        }
+        
+        textarea:focus { outline: none; border-color: var(--primary); }
 
-        .mic-btn {
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-            background: rgba(0,0,0,0.2);
-            border: none;
-            color: var(--primary);
-            cursor: pointer;
-            font-size: 1.2rem;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .mic-btn.listening { background: #ff4757; color: white; animation: pulse 1.5s infinite; }
+        .mic-btn {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background: rgba(0,0,0,0.2);
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+            font-size: 1.2rem;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .mic-btn.listening { background: #ff4757; color: white; animation: pulse 1.5s infinite; }
 
-        select {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
-            background-color: var(--input-bg);
-            color: var(--text);
-            border: 2px solid var(--border);
-            font-family: 'Outfit', sans-serif;
-            font-size: 16px; /* Prevents zooming on iOS */
-            appearance: none; /* Custom arrow needed */
-        }
+        select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            background-color: var(--input-bg);
+            color: var(--text);
+            border: 2px solid var(--border);
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px; /* Prevents zooming on iOS */
+            appearance: none; /* Custom arrow needed */
+        }
 
-        .speed-control { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; }
-        input[type="range"] { accent-color: var(--primary); width: 80px; }
+        .speed-control { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; }
+        input[type="range"] { accent-color: var(--primary); width: 80px; }
 
-        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
 
-        .main-btn {
-            flex: 2;
-            padding: 16px;
-            border-radius: 50px;
-            border: none;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .icon-btn {
-            flex: 1;
-            padding: 16px;
-            border-radius: 16px;
-            border: 2px solid var(--border);
-            background: var(--input-bg);
-            color: var(--text);
-            cursor: pointer;
-            font-weight: 600;
-        }
+        .main-btn {
+            flex: 2;
+            padding: 16px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .icon-btn {
+            flex: 1;
+            padding: 16px;
+            border-radius: 16px;
+            border: 2px solid var(--border);
+            background: var(--input-bg);
+            color: var(--text);
+            cursor: pointer;
+            font-weight: 600;
+        }
 
-        .theme-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--card);
-            border: none;
-            color: var(--text);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            cursor: pointer;
-            font-size: 1.2rem;
-            z-index: 100;
-        }
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--card);
+            border: none;
+            color: var(--text);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            font-size: 1.2rem;
+            z-index: 100;
+        }
 
-        .output-section { margin-top: 20px; }
-        
-        .translation-output {
-            padding: 20px;
-            background: rgba(0,0,0,0.1);
-            border-radius: 12px;
-            min-height: 40px;
-            color: var(--primary);
-            font-size: 1.1rem;
-            font-weight: 500;
-            display: none;
-        }
+        .output-section { margin-top: 20px; }
+        
+        .translation-output {
+            padding: 20px;
+            background: rgba(0,0,0,0.1);
+            border-radius: 12px;
+            min-height: 40px;
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            display: none;
+        }
 
-        /* History */
-        .history-section {
-            margin-top: 25px;
-            border-top: 1px solid var(--border);
-            padding-top: 15px;
-            text-align: left;
-        }
-        .history-list {
-            list-style: none;
-            padding: 0;
-            max-height: 120px;
-            overflow-y: auto;
-        }
-        .history-item {
-            background: var(--input-bg);
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        /* History */
+        .history-section {
+            margin-top: 25px;
+            border-top: 1px solid var(--border);
+            padding-top: 15px;
+            text-align: left;
+        }
+        .history-list {
+            list-style: none;
+            padding: 0;
+            max-height: 120px;
+            overflow-y: auto;
+        }
+        .history-item {
+            background: var(--input-bg);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
-    </style>
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+    </style>
 </head>
 <body>
 
-    <button class="theme-toggle" id="theme-btn">🌗</button>
+    <button class="theme-toggle" id="theme-btn">🌗</button>
 
-    <div class="container">
-        <h1>LinguaVox</h1>
-        <div class="tagline">Mobile & Desktop Ready</div>
+    <div class="container">
+        <h1>LinguaVox</h1>
+        <div class="tagline">Mobile & Desktop Ready</div>
 
-        <div class="input-group">
-            <label>Input Text <span style="font-size:0.7em; opacity:0.6">(or use Mic on Chrome/Android)</span></label>
-            <div class="text-area-wrapper">
-                <textarea id="text-input" placeholder="Type here..."></textarea>
-                <button id="mic-btn" class="mic-btn">🎙️</button>
-            </div>
-        </div>
+        <div class="input-group">
+            <label>Input Text <span style="font-size:0.7em; opacity:0.6">(or use Mic on Chrome/Android)</span></label>
+            <div class="text-area-wrapper">
+                <textarea id="text-input" placeholder="Type here..."></textarea>
+                <button id="mic-btn" class="mic-btn">🎙️</button>
+            </div>
+        </div>
 
-        <div class="input-group">
-            <label>
-                Target Language
-                <div class="speed-control">
-                    <span>Speed</span>
-                    <input type="range" id="speed-slider" min="0.5" max="1.5" step="0.1" value="1">
-                </div>
-            </label>
-            <select id="lang-select">
-                <option value="mr-IN">🇮🇳 Marathi</option>
-                <option value="hi-IN">🇮🇳 Hindi</option>
-                <option value="en-US">🇺🇸 English</option>
-                <option value="es-ES">🇪🇸 Spanish</option>
-                <option value="fr-FR">🇫🇷 French</option>
-                <option value="de-DE">🇩🇪 German</option>
-                <option value="ja-JP">🇯🇵 Japanese</option>
-            </select>
-        </div>
+        <div class="input-group">
+            <label>
+                Target Language
+                <div class="speed-control">
+                    <span>Speed</span>
+                    <input type="range" id="speed-slider" min="0.5" max="1.5" step="0.1" value="1">
+                </div>
+            </label>
+            <select id="lang-select">
+                <option value="mr-IN">🇮🇳 Marathi</option>
+                <option value="hi-IN">🇮🇳 Hindi</option>
+                <option value="en-US">🇺🇸 English</option>
+                <option value="es-ES">🇪🇸 Spanish</option>
+                <option value="fr-FR">🇫🇷 French</option>
+                <option value="de-DE">🇩🇪 German</option>
+                <option value="ja-JP">🇯🇵 Japanese</option>
+            </select>
+        </div>
 
-        <div class="btn-group">
-            <button id="translate-btn" class="main-btn">Translate & Speak</button>
-            <button id="share-btn" class="icon-btn">🚀 Share</button>
-        </div>
+        <div class="btn-group">
+            <button id="translate-btn" class="main-btn">Translate & Speak</button>
+            <button id="share-btn" class="icon-btn">🚀 Share</button>
+        </div>
 
-        <div class="output-section">
-            <div class="translation-output" id="output-box"></div>
-        </div>
+        <div class="output-section">
+            <div class="translation-output" id="output-box"></div>
+        </div>
 
-        <div class="history-section">
-            <div style="font-weight:bold; font-size:0.9rem; margin-bottom:10px;">Recent History</div>
-            <ul class="history-list" id="history-list"></ul>
-        </div>
-    </div>
+        <div class="history-section">
+            <div style="font-weight:bold; font-size:0.9rem; margin-bottom:10px;">Recent History</div>
+            <ul class="history-list" id="history-list"></ul>
+        </div>
+    </div>
 
-    <script>
-        const textarea = document.getElementById("text-input");
-        const langSelect = document.getElementById("lang-select");
-        const translateBtn = document.getElementById("translate-btn");
-        const shareBtn = document.getElementById("share-btn");
-        const micBtn = document.getElementById("mic-btn");
-        const outputBox = document.getElementById("output-box");
-        const themeBtn = document.getElementById("theme-btn");
-        const historyList = document.getElementById("history-list");
-        const speedSlider = document.getElementById("speed-slider");
+    <script>
+        const textarea = document.getElementById("text-input");
+        const langSelect = document.getElementById("lang-select");
+        const translateBtn = document.getElementById("translate-btn");
+        const shareBtn = document.getElementById("share-btn");
+        const micBtn = document.getElementById("mic-btn");
+        const outputBox = document.getElementById("output-box");
+        const themeBtn = document.getElementById("theme-btn");
+        const historyList = document.getElementById("history-list");
+        const speedSlider = document.getElementById("speed-slider");
 
-        // --- Theme Toggle ---
-        themeBtn.addEventListener('click', () => document.body.classList.toggle('light-mode'));
+        // --- Theme Toggle ---
+        themeBtn.addEventListener('click', () => document.body.classList.toggle('light-mode'));
 
-        // --- Voice Input (Chrome/Android Only) ---
-        // Note: iOS Safari does not support the Web Speech API for recording yet.
-        if ('webkitSpeechRecognition' in window) {
-            const recognition = new webkitSpeechRecognition();
-            recognition.continuous = false;
-            recognition.lang = 'en-US';
+        // --- Voice Input (Chrome/Android Only) ---
+        // Note: iOS Safari does not support the Web Speech API for recording yet.
+        if ('webkitSpeechRecognition' in window) {
+            const recognition = new webkitSpeechRecognition();
+            recognition.continuous = false;
+            recognition.lang = 'en-US';
 
-            micBtn.addEventListener('click', () => {
-                if (micBtn.classList.contains('listening')) recognition.stop();
-                else recognition.start();
-            });
+            micBtn.addEventListener('click', () => {
+                if (micBtn.classList.contains('listening')) recognition.stop();
+                else recognition.start();
+            });
 
-            recognition.onstart = () => micBtn.classList.add('listening');
-            recognition.onend = () => micBtn.classList.remove('listening');
-            recognition.onresult = (e) => textarea.value = e.results[0][0].transcript;
-        } else {
-            // Hide mic on iOS/Unsupported browsers to avoid confusion
-            micBtn.style.display = 'none';
-        }
+            recognition.onstart = () => micBtn.classList.add('listening');
+            recognition.onend = () => micBtn.classList.remove('listening');
+            recognition.onresult = (e) => textarea.value = e.results[0][0].transcript;
+        } else {
+            // Hide mic on iOS/Unsupported browsers to avoid confusion
+            micBtn.style.display = 'none';
+        }
 
-        // --- Translation & Speak ---
-        async function translateAndSpeak() {
-            const text = textarea.value;
-            const targetLang = langSelect.value;
-            if(!text) return alert("Please enter text first.");
+        // --- Translation & Speak ---
+        async function translateAndSpeak() {
+            const text = textarea.value;
+            const targetLang = langSelect.value;
+            if(!text) return alert("Please enter text first.");
 
-            // UI Loading
-            translateBtn.innerText = "Processing...";
-            outputBox.style.display = "block";
-            outputBox.innerText = "Translating...";
+            // UI Loading
+            translateBtn.innerText = "Processing...";
+            outputBox.style.display = "block";
+            outputBox.innerText = "Translating...";
 
-            // 1. Translate
-            try {
-                const apiLang = targetLang.split('-')[0];
-                const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|${apiLang}`);
-                const data = await res.json();
-                const translatedText = data.responseData.translatedText;
+            // 1. Translate
+            try {
+                const apiLang = targetLang.split('-')[0];
+                const res = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=en|${apiLang}`);
+                const data = await res.json();
+                const translatedText = data.responseData.translatedText;
 
-                outputBox.innerText = translatedText;
-                addToHistory(text, translatedText);
-                speak(translatedText, targetLang);
-            } catch (err) {
-                outputBox.innerText = "Error. Try again.";
-            }
-            
-            translateBtn.innerText = "Translate & Speak";
-        }
+                outputBox.innerText = translatedText;
+                addToHistory(text, translatedText);
+                speak(translatedText, targetLang);
+            } catch (err) {
+                outputBox.innerText = "Error. Try again.";
+            }
+            
+            translateBtn.innerText = "Translate & Speak";
+        }
 
-        // --- Speech Synthesis (iOS Compatible) ---
-        function speak(text, lang) {
-            window.speechSynthesis.cancel(); // Stop previous
-            const utter = new SpeechSynthesisUtterance(text);
-            utter.lang = lang;
-            utter.rate = speedSlider.value;
-            
-            // Voice matching attempt
-            const voices = window.speechSynthesis.getVoices();
-            const voice = voices.find(v => v.lang.includes(lang.split('-')[0]));
-            if(voice) utter.voice = voice;
+        // --- Speech Synthesis (iOS Compatible) ---
+        function speak(text, lang) {
+            window.speechSynthesis.cancel(); // Stop previous
+            const utter = new SpeechSynthesisUtterance(text);
+            utter.lang = lang;
+            utter.rate = speedSlider.value;
+            
+            // Voice matching attempt
+            const voices = window.speechSynthesis.getVoices();
+            const voice = voices.find(v => v.lang.includes(lang.split('-')[0]));
+            if(voice) utter.voice = voice;
 
-            window.speechSynthesis.speak(utter);
-        }
+            window.speechSynthesis.speak(utter);
+        }
 
-        // --- History ---
-        function addToHistory(original, translated) {
-            let history = JSON.parse(localStorage.getItem('pg_history')) || [];
-            history.unshift({ original, translated });
-            if(history.length > 5) history.pop();
-            localStorage.setItem('pg_history', JSON.stringify(history));
-            renderHistory();
-        }
+        // --- History ---
+        function addToHistory(original, translated) {
+            let history = JSON.parse(localStorage.getItem('pg_history')) || [];
+            history.unshift({ original, translated });
+            if(history.length > 5) history.pop();
+            localStorage.setItem('pg_history', JSON.stringify(history));
+            renderHistory();
+        }
 
-        function renderHistory() {
-            const history = JSON.parse(localStorage.getItem('pg_history')) || [];
-            historyList.innerHTML = history.map(item => 
-                `<li class="history-item" onclick="textarea.value='${item.original}'">
-                    <span>${item.translated}</span>
-                 </li>`
-            ).join('');
-        }
-        renderHistory();
+        function renderHistory() {
+            const history = JSON.parse(localStorage.getItem('pg_history')) || [];
+            historyList.innerHTML = history.map(item => 
+                `<li class="history-item" onclick="textarea.value='${item.original}'">
+                    <span>${item.translated}</span>
+                 </li>`
+            ).join('');
+        }
+        renderHistory();
 
-        // --- Event Listeners ---
-        translateBtn.addEventListener('click', translateAndSpeak);
-        
-        shareBtn.addEventListener('click', () => {
-            if(navigator.share) {
-                navigator.share({
-                    title: 'LinguaVox Translation',
-                    text: outputBox.innerText || textarea.value
-                });
-            } else {
-                alert("Share not supported on this browser.");
-            }
-        });
+        // --- Event Listeners ---
+        translateBtn.addEventListener('click', translateAndSpeak);
+        
+        shareBtn.addEventListener('click', () => {
+            if(navigator.share) {
+                navigator.share({
+                    title: 'LinguaVox Translation',
+                    text: outputBox.innerText || textarea.value
+                });
+            } else {
+                alert("Share not supported on this browser.");
+            }
+        });
 
-        // iOS Voice Loading Fix
-        window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
-    </script>
+        // iOS Voice Loading Fix
+        window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+    </script>
 </body>
-</html>
+</html> make changes in this code and give me
